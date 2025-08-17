@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    Functions adn Array
+    <script>
+      function sayHello(func) {
+        console.log("Hello world");
+        func();
+      }
+
+      sayHello(() => {
+        console.log("Hello from the callback function");
+      });
+
+      function orderPizza(size, qty) {
+        console.log(`You ordered ${size} pizza(s) and the quantity is ${qty}`);
+      }
+
+      orderPizza("Sm", 2);
+
+      function percentageCalculator(obtMarks, totalMarks) {
+        const percentage = (obtMarks / totalMarks) * 100;
+
+        return percentage;
+      }
+
+      const obtMarks = 80;
+      const totalMarks = 100;
+
+      const percentage = percentageCalculator(obtMarks, totalMarks);
+      alert(`YOur percentage is ${percentage}%`);
+
+      const calculateArea = (length, width) => {
+        return length * width;
+      };
+
+      calculateArea();
+
+      const names = [
+        "Zeeshabn",
+        "Ali",
+        "Asad",
+        "Noukhaiz",
+        3,
+        4,
+        5,
+        6,
+        true,
+        false,
+        [3, 444],
+      ];
+      console.log(names[10][1]);
+
+      names.push("New Name");
+      names.push("New Name");
+      names.push("New Name");
+      names.push("New Name");
+      names.push("New Name");
+
+      names.pop();
+
+      //   Add in start
+      names.unshift("Farhan");
+
+      //   Remove from start
+      names.shift();
+
+      console.log(names.length);
+      console.log(names.includes("Asad"));
+
+      console.log(names.indexOf("Farhan"));
+
+      console.log(names);
+
+      names.map((nm) => {
+        console.log(nm);
+      });
+
+      //   Make User Ages Array
+      // then traverse each age if >=18 show console otherweise nothing
+
+      const ages = [34, 56, 12, 45, 67, 23, 89, 10];
+      ages.map((age) => {
+        if (age >= 18) {
+          console.log(age);
+        }
+      });
+    </script>
+  </body>
+</html>
