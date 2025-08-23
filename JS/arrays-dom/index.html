@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Arrays and Dom</h1>
+    <script>
+      const matrix = [
+        [1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9],
+      ];
+
+      const matrix3d = [
+        [
+          [1, 2, 3],
+          [1, 2, 3],
+        ],
+        [
+          [4, 5, 6],
+          [4, 5, 6],
+        ],
+      ];
+
+      console.log(matrix3d[1][0][2]);
+
+      const names1D = ["Alice", "Bob", "Charlie"];
+
+      const ages = [12, 15, 14, 19, 24, 55];
+
+      //   Map All
+      names1D.map((nm) => {
+        console.log(nm);
+      });
+
+      ages.map((age) => {
+        console.log(age);
+      });
+
+      const updatedAges = ages.filter((ag) => {
+        if (ag >= 18) {
+          return ag;
+        }
+      });
+
+      const updatedNames = names1D.filter((name) => {
+        if (!name.toLocaleLowerCase().includes("a")) {
+          return name;
+        }
+      });
+
+      console.log(updatedAges);
+      console.log(updatedNames.length);
+
+      console.log(updatedAges.indexOf(1000));
+
+      updatedAges.find((age) => {
+        if (age === 1000) {
+          return age;
+        }
+      });
+
+      //   Objects
+
+      const person = {
+        name: "John",
+        age: 34,
+        friendsList: [233, 4, 5, 56, 6, 7],
+      };
+
+      const carDetail = {};
+      console.log(person.age);
+
+      const persons = [
+        { name: "ALi", age: 34 },
+        {
+          name: "Sam",
+          age: 30,
+        },
+      ];
+
+      const jsonData = JSON.stringify(persons);
+      console.log(JSON.parse(jsonData));
+
+      const friendNames = ["Ali", "Sam", "John"];
+
+      friendNames.push("Zeeshan");
+      friendNames.unshift("Kash");
+
+      friendNames.pop();
+      friendNames.shift();
+      console.log(friendNames);
+    </script>
+  </body>
+</html>

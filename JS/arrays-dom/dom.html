@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    DOM
+
+    <button onclick="showAlert()">Click to show Alert</button>
+
+    <form onsubmit="calculatePercenage(); return false;">
+      <input
+        type="text"
+        name="obtainedMarks"
+        id="obtainedMarks"
+        placeholder="Enter Obtained Marks"
+        required
+      />
+      <input
+        type="text"
+        name="totalMarks"
+        id="totalMarks"
+        placeholder="Enter total Marks"
+        required
+      />
+
+      <button type="submit">Calculate</button>
+    </form>
+
+    <script>
+      function calculatePercenage() {
+        alert("I called")
+
+
+      }
+      function showAlert() {
+        alert("Hello, this is an alert!");
+      }
+    </script>
+  </body>
+</html>
