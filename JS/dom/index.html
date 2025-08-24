@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form onsubmit="addNumber(); return false;">
+      <input type="number" name="num1" id="num1" placeholder="Enter num1" />
+      <input type="number" name="num2" id="num2" placeholder="Enter num2" />
+      <button type="submit">Add</button>
+    </form>
+    <form onsubmit="calculatePercentage(); return false;">
+      <input
+        type="number"
+        name="obtMarks"
+        id="obtMarks"
+        placeholder="Enter Obtained Marks"
+      />
+      <input
+        type="number"
+        name="totalMarks"
+        id="totalMarks"
+        placeholder="Enter Total Marks"
+      />
+      <button type="submit">Calculate</button>
+    </form>
+
+    <button id="sayHello">Say Hello</button>
+
+    <div id="result"></div>
+
+    <div id="container">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam eum,
+        odit nihil aliquam nam dolorum id deleniti nisi quae aspernatur ipsum
+        praesentium in sit voluptates officiis veritatis animi quod perferendis.
+      </p>
+    </div>
+
+    <script>
+      // Make a Percentage Calculator in 14 minutes
+      function addNumber() {
+        // Ref
+        const num1InputRef = document.getElementById("num1");
+        const num2InputRef = document.getElementById("num2");
+
+        const resultRef = document.querySelector("#result");
+        // Value
+        const num1Value = num1InputRef.value;
+        const num2Value = num2InputRef.value;
+        const result = Number(num1Value) + Number(num2Value);
+
+        resultRef.innerHTML = "Result: " + result; // Result 46
+      }
+
+      function calculatePercentage() {
+        // Ref
+        const obtMarksInputRef = document.getElementById("obtMarks");
+        const totalMarksInputRef = document.getElementById("totalMarks");
+
+        const resultRef = document.querySelector("#result");
+        // Value
+        const obtMarksValue = obtMarksInputRef.value;
+        const totalMarksValue = totalMarksInputRef.value;
+        const percentage =
+          (Number(obtMarksValue) / Number(totalMarksValue)) * 100;
+
+        resultRef.innerHTML =
+          resultRef.innerHTML + "<br> Percentage: " + percentage + "%"; // Result 46
+      }
+
+      //   Event Listeners
+
+      const containerRef = document.getElementById("container");
+
+      containerRef.addEventListener("mouseleave", () => {
+        alert("The mouse has left the container");
+      });
+
+      const helloBtn = document.getElementById("sayHello");
+      helloBtn.addEventListener("click", () => {
+        alert("Hello User");
+      });
+
+      window.addEventListener("resize", function () {});
+    </script>
+  </body>
+</html>
